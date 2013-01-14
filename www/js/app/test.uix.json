@@ -1,0 +1,43 @@
+    [
+        "bs.container", {"span":4, "hiddenPhone":true},
+        [
+            ["bs.row", {"fluid":true, "span":8}, [
+                ["w.test", {"name":"helloworldWidget"}],
+                ["bs.textInput", {"name":"display"}]
+            ] ],
+            ["bs.row", {"fluid":true, "span":8}, [
+                ["bs.button", {"name":"num_7", "text":"7", "span":2} ],
+                ["bs.button", {"name":"num_8", "text":"8", "span":2} ],
+                ["bs.button", {"name":"num_9", "text":"9", "span":2} ],
+                ["bs.button", {"text":"+", "span":2} ]
+            ] ],
+            ["bs.row", {"fluid":true, "span":8}, [
+                ["bs.button", {"name":"num_4", "text":"4", "span":2} ],
+                ["bs.button", {"name":"num_5", "text":"5", "span":2} ],
+                ["bs.button", {"name":"num_6", "text":"6", "span":2} ],
+                ["bs.button", {"text":"-", "span":2} ]
+            ] ],
+            ["bs.row", {"fluid":true, "span":8}, [
+                ["bs.button", {"name":"num_1", "text":"1", "span":2} ],
+                ["bs.button", {"name":"num_2", "text":"2", "span":2} ],
+                ["bs.button", {"name":"num_3", "text":"3", "span":2} ],
+                ["bs.button", {"text":"*", "span":2} ]
+            ] ],
+            ["bs.row", {"fluid":true, "span":8}, [
+                ["bs.button", {"name":"num_0", "text":"0", "span":4} ],
+                ["bs.button", {"text":".", "span":2} ],
+                ["bs.button", {"text":"/", "span":2} ]
+            ] ],
+            ["bs.row", {"fluid":true, "span":8}, [
+                ["bs.iconButton", {
+                    "text":"=",
+                    "span":7,
+                    "type":"PRIMARY",
+                    "size":"LARGE",
+                    "iconRight":"OK"} ],
+                ["bs.component", {"span":1}, [
+                    ["bs.icon", {"glyph":"OK"}]
+                ] ]
+            ] ]
+        ]
+    ]

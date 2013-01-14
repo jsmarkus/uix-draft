@@ -1,0 +1,12 @@
+[
+	"bs.row", {"fluid":true}, [
+		["bs.button", {
+			"name":"helloButton",
+			"text":"Hello,"
+		}],
+		["bs.button", {
+			"name":"worldButton",
+			"text":"World!"
+		}]
+	]
+]

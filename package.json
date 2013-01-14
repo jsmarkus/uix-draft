@@ -1,0 +1,14 @@
+{
+  "amd": {},
+  "volo": {
+    "baseUrl": "www/js/lib",
+    "dependencies": {
+      "zepto": "github:madrobby/zepto/v0.8",
+      "klass": "github:ded/klass/v1.0",
+      "EventEmitter": "github:Wolfy87/EventEmitter/v4.0.3",
+      "bootstrap": "http://twitter.github.com/bootstrap/assets/bootstrap.zip",
+      "require-css": "github:guybedford/require-css/master",
+      "text": "github:requirejs/text/2.0.3"
+    }
+  }
+}

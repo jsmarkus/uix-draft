@@ -1,0 +1,27 @@
+JSON:
+
+    ["ButtonGroup", {
+        "pull" : "right"
+    }, [
+        ["Button", {"text":"Aaaa", "color":"red"}]
+    ]];
+
+UIXML:
+
+    <ButtonGroup pull="right">
+        <Button text="Aaaa" color="red" />
+    </ButtonGroup>
+
+UIXML-jade:
+
+    ButtonGroup(pull="right")
+        Button(text="Aaaa", color="red")
+
+HTML (uix controls embedded to HTML document):
+
+    <div data-uix="ButtonGroup"
+        data-pull="right">
+        <div data-uix="Button"
+            data-text="Aaaa"
+            data-color="red" />
+    </div>

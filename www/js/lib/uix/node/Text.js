@@ -4,8 +4,7 @@ define(function (require) {
 
     var $ = uix.$;
 
-    var Checkbox = Node.extend(function Text (type, attrs, children) {
-    }).methods({
+    var Checkbox = Node.extend({
         ATTR_value : {
             change : '_uiSet_value',
             value : 'qqqqqqqqqqqqq'

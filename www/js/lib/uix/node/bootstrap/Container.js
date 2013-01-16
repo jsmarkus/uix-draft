@@ -4,7 +4,7 @@ define(function(require) {
 
     var $ = uix.$;
 
-    return Component.extend(function Container(type, attrs, children) {}).methods({
+    return Component.extend({
         ATTR_fluid : {
             change : '_uiSet_fluid',
             value : false

@@ -1,16 +1,15 @@
 define(function(require) {
 
-    var klass = require('klass');
+    var Boop = require('boop');
     var EventEmitter = require('EventEmitter');
 
-    var Model = klass(
-
-    function Model() {
-        this._attrs = {};
-        this.event = new EventEmitter();
-        this._bufferedChanges = {};
-        this._setDefaultAttributes();
-    }).methods({
+    return Boop.extend({
+        initialize : function () {
+            this._attrs = {};
+            this.event = new EventEmitter();
+            this._bufferedChanges = {};
+            this._setDefaultAttributes();
+        },
 
         trigger : function (eventName, args) {
             args = args || [];
@@ -106,7 +105,7 @@ define(function(require) {
             }
             return this._attrs[attr];
         }
+
     });
 
-    return Model;
 });

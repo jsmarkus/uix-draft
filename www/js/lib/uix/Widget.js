@@ -2,17 +2,19 @@ define(function(require) {
     var Model = require('./Model');
     var uix = require('uix/uix');
 
-    return Model.extend(function Widget(factory, attrs) {
-        attrs = attrs || {};
-        this._populateAttrs(attrs);
-        this.set('id', uix.createUid(), {silent:true});
-        this._factory = factory;
-        this._nodesByName = {};
-        if(this._description) {
-            this._setDescription(this._description);
-            this._processConnections();
-        }
-    }).methods({
+    return Model.extend({
+        initialize : function (factory, attrs) {
+            Model.prototype.initialize.call(this); //super
+            attrs = attrs || {};
+            this._populateAttrs(attrs);
+            this.set('id', uix.createUid(), {silent:true});
+            this._factory = factory;
+            this._nodesByName = {};
+            if(this._description) {
+                this._setDescription(this._description);
+                this._processConnections();
+            }
+        },
         ATTR_id : {},
         ATTR_name : {},
         IS_WIDGET : true,
@@ -31,7 +33,7 @@ define(function(require) {
         _processConnections : function () {
             for (var i = 0; i < this._connect.length; i++) {
                 this._processConnection(this._connect[i]);
-            };
+            }
         },
         _onNodeCreate : function (node) {
             // debugger

@@ -1,19 +1,22 @@
 define(function(require) {
 
     var uix = require('uix/uix');
-    var klass = require('klass');
     var Model = require('./Model');
 
     var $ = uix.$;
 
 
-    var Node = Model.extend(function Node(type, attrs, children) {
-        this.set('id', uix.createUid(), {silent:true});
-        this.type = type;
-        this.attrs = attrs || {};
-        this.children = children || [];
-        this._populateAttrs(this.attrs);
-    }).methods({
+    var Node = Model.extend({
+
+        initialize : function (type, attrs, children) {
+            Model.prototype.initialize.call(this); //super
+            this.set('id', uix.createUid(), {silent:true});
+            this.type = type;
+            this.attrs = attrs || {};
+            this.children = children || [];
+            this._populateAttrs(this.attrs);
+        },
+
         ATTR_id : {
             change : '_uiSet_id',
             validate : '_validate_id'

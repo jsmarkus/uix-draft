@@ -5,7 +5,7 @@ define(function(require) {
 
     var $ = uix.$;
 
-    return Component.extend(function Icon(type, attrs, children) {}).methods({
+    return Component.extend({
 
         ATTR_glyph: {
             change: '_uiSet_glyph',

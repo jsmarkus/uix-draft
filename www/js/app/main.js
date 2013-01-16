@@ -8,7 +8,7 @@ define(function(require) {
 
 
 
-    var MyScreen = Widget.extend(function (){}).methods({
+    var MyScreen = Widget.extend({
         _description : JSON.parse(require('text!./test.uix.json')),
         _connect : [
             ['num_1', 'click', '_onNumClick'],
@@ -29,24 +29,25 @@ define(function(require) {
 
 
 
-    // // var n = f.create(['bs.button', {text:'7', span:2} ]);
+    // var n = f.create(['bs.button', {text:'7', span:2} ]);
     // var n = f.create(
     // );
     var screen = new MyScreen(new DefaultFactory(), {});
 
     var dom = screen.render();
+    // var dom = n.render();
     console.log(dom);
     dom.appendTo('body');
-    var helloButton = screen.byName('helloworldWidget').byName('helloButton');
-    console.log(helloButton);
-    var display = screen.byName('display');
-    display.set('size', 'XXLARGE');
-    helloButton.event.on('click',
-        function () {
-            helloButton.set('text', 'Goodbye,');
-            helloButton.set('type', 'DANGER');
+    // var helloButton = screen.byName('helloworldWidget').byName('helloButton');
+    // console.log(helloButton);
+    // var display = screen.byName('display');
+    // display.set('size', 'XXLARGE');
+    // helloButton.event.on('click',
+    //     function () {
+    //         helloButton.set('text', 'Goodbye,');
+    //         helloButton.set('type', 'DANGER');
 
-        }
-    );
+    //     }
+    // );
 
 });

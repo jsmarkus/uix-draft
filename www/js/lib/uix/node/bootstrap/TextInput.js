@@ -5,7 +5,7 @@ define(function(require) {
 
     var $ = uix.$;
 
-    return Component.extend(function Button(type, attrs, children) {}).methods({
+    return Component.extend({
 // .input-mini       { width: 60px; }
 // .input-small      { width: 90px; }
 // .input-medium     { width: 150px; }

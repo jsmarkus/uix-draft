@@ -5,7 +5,7 @@ define(function(require) {
 
     var $ = uix.$;
 
-    return Component.extend(function Button(type, attrs, children) {}).methods({
+    return Component.extend({
         ATTR_type : {
             change : '_uiSet_type',
             validate : '_validate_type',

@@ -8,11 +8,14 @@ define(function(require) {
 
     var $ = uix.$;
 
-    return Button.extend(function IconButton(type, attrs, children) {
-        this._iconLeft = new Icon();
-        this._span = new Node('span');
-        this._iconRight = new Icon();
-    }).methods({
+    return Button.extend({
+        initialize : function (type, attrs, children) {
+            this._iconLeft = new Icon();
+            this._span = new Node('span');
+            this._iconRight = new Icon();
+            Button.prototype.initialize.apply(this, arguments); //super
+        },
+
         ATTR_iconLeft : {
             change : '_uiSet_icon',
             value : null
@@ -61,7 +64,7 @@ define(function(require) {
                 this._iconLeft.set('white', false);
                 this._iconRight.set('white', false);
             }
-            this.supr(name, value);
+            Button.prototype._uiSet_type.call(this, name, value); //super
         }
 
     });

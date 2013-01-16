@@ -4,9 +4,7 @@ define(function(require) {
 
     var $ = uix.$;
 
-    var Component = Node.extend(function Component(type, attrs, children) {
-
-    }).methods({
+    var Component = Node.extend({
         // - span : Number, 1..12
         // - offset : Number, 1..12
         // - visiblePhone : Boolean

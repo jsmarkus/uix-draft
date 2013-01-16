@@ -1,12 +1,15 @@
 define(function(require) {
-    var klass = require('klass');
+    var Boop = require('boop');
     var Node = require('./Node');
     var Widget = require('./Widget');
 
-    var Factory = klass(function() {
-        this._typeMap = {};
-        this._defaultClass = Node;
-    }).methods({
+    return Boop.extend({
+
+        initialize : function() {
+            this._typeMap = {};
+            this._defaultClass = Node;
+        },
+
         addType: function(type, klass) {
             this._typeMap[type] = klass;
         },
@@ -40,6 +43,4 @@ define(function(require) {
             return result;
         }
     });
-
-    return Factory;
 });

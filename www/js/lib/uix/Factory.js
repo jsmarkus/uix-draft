@@ -14,6 +14,12 @@ define(function(require) {
             this._typeMap[type] = klass;
         },
 
+        addTypes: function(types) {
+            for(var type in types) {
+                this.addType(type, types[type]);
+            }
+        },
+
         _getClass: function(type) {
             if(this._typeMap.hasOwnProperty(type)) {
                 var klass = this._typeMap[type];

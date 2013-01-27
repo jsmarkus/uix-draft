@@ -69,5 +69,5 @@ w.addChild(childNode[, atIndex]);
 //Render the widget
 var dom = w.render();
 
-//var node = w.getByName(name);
+var node = w.getByName(name);
 ```
